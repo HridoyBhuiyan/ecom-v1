@@ -1,12 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import './assets/css/responsive.css';
+import AppRoute from "./components/route/AppRoute";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ecom Express starting</h1>
-    </div>
+    <Fragment>
+        <AppRoute/>
+    </Fragment>
   );
 }
 
