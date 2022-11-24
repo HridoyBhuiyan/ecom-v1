@@ -28,3 +28,10 @@
 @import "responsive.css";
 @import "toast.css";
 @import "search.css";
+
+body{
+    background-color: white !important;
+}
+.slick-prev:before, .slick-next:before{
+    color:black
+}
