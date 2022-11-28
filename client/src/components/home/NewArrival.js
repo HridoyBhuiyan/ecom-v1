@@ -1,15 +1,21 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useRef} from 'react';
 import Slider from 'react-slick';
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Container, Row} from "react-bootstrap";
 import watchImg from "../../assets/image/watch.jpg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronRight} from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 function NewArrival(props) {
-    
+
+    const sliderRef = new useRef();
+
     const settings = {
         infinite: true,
         speed: 500,
         autoplay:true,
         autoplaySpeed:2000,
         slidesToShow: 3,
+        arrows:false,
         slidesToScroll: 3,
         initialSlide: 0,
         responsive: [
@@ -39,13 +45,26 @@ function NewArrival(props) {
             }
         ]
     }
+
+    const handleLeft = ()=>{
+        sliderRef.current.slickPrev()
+    }
+
+    const handleRight=()=>{
+        sliderRef.current.slickNext()
+    }
+
+
+
     return (
         <Fragment>
             <Container className={'text-center'}>
                 <h4 className={'section-title'}>FEATURED PRODUCT</h4>
-                <h6 className={'section-sub-title'}>Some of our exclusive collection, you may like</h6>
+                <FontAwesomeIcon icon={faChevronLeft} className={'p-3 btn m-1 rounded text-white bg-danger'} onClick={handleLeft}/>
+                <FontAwesomeIcon icon={faChevronRight} className={'p-3 btn m-1 rounded text-white bg-danger'} onClick={handleRight}/>
+                <h6 className={'section-sub-title'}>Some of our exclusive collection, you may like.</h6>
                 <Row>
-                    <Slider {...settings}>
+                    <Slider {...settings} ref={sliderRef}>
                         <div>
                                 <Card className={'p-1 card'}>
                                     <img   src={watchImg}/>
