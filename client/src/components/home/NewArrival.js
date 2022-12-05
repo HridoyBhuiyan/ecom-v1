@@ -59,7 +59,7 @@ function NewArrival(props) {
     return (
         <Fragment>
             <Container className={'text-center'}>
-                <h4 className={'section-title'}>FEATURED PRODUCT</h4>
+                <h4 className={'section-title'}>NEW PRODUCT</h4>
                 <FontAwesomeIcon icon={faChevronLeft} className={'p-3 btn m-1 rounded text-white bg-danger'} onClick={handleLeft}/>
                 <FontAwesomeIcon icon={faChevronRight} className={'p-3 btn m-1 rounded text-white bg-danger'} onClick={handleRight}/>
                 <h6 className={'section-sub-title'}>Some of our exclusive collection, you may like.</h6>

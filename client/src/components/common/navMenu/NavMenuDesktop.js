@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react';
 import {Col, Form, Container, InputGroup, Navbar, Row} from "react-bootstrap";
-import Logo from '../../assets/image/logo.png'
+import Logo from '../../../assets/image/logo.png'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBell, faHeart, faMobile, faSearch, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 function NavMenuDesktop(props) {
     return (
         <Fragment>
@@ -10,18 +11,19 @@ function NavMenuDesktop(props) {
                 <Container fluid={true}>
                     <Row className={'w-100'}>
 
-                        <Col xl={2} lg={2} md={3} className={'d-flex align-items-center'}>
-                            <Navbar.Brand href="#home" className={'px-2'}>
-                                <img src={Logo} height={45}/>
+                        <Col xl={4} lg={2} md={4} className={'d-flex align-items-center'}>
+                            <Navbar.Brand className={'px-2'}>
+                                <Link to={'/'}>
+                                    <img src={Logo} height={45}/>
+                                </Link>
                             </Navbar.Brand>
-                            <div className={'bg-danger text-white cart-btn d-flex align-items-center'} style={{height:"fit-content"}}>
+                            <Link to={'/cart'} className={'bg-danger text-white cart-btn d-flex align-items-center'} style={{height:"fit-content"}}>
                                 <FontAwesomeIcon icon={faShoppingCart}/> 4 Items
-                            </div>
+                            </Link>
                         </Col>
 
 
-
-                        <Col xl={8} lg={8} md={6} className={'d-flex justify-content-center align-items-center '}>
+                        <Col xl={4} lg={8} md={4} className={'d-flex justify-content-center align-items-center '}>
                             <InputGroup className={'w-75'}>
                                 <Form.Control className={'searchBox'}/>
                                 <InputGroup.Text className={"m-0 p-0"}>
@@ -33,18 +35,18 @@ function NavMenuDesktop(props) {
                         </Col>
 
 
-                        <Col xl={2} lg={2} md={3} className={'d-flex justify-content-end align-items-center'}>
-                            <div className={'mx-3'}>
+                        <Col xl={4} lg={2} md={4} className={'d-flex justify-content-end align-items-center'}>
+                            <Link to={'/favourite'} className={'mx-3'}>
                                 <FontAwesomeIcon icon={faHeart} className={'text-dark'} style={{fontSize:24}}/><sup className={'text-white p-1 px-2 bg-danger rounded'} >2</sup>
-                            </div>
-                            <div className={'mx-3'}>
+                            </Link>
+                            <Link to={'/notification'} className={'mx-3'}>
                                 <FontAwesomeIcon icon={faBell} className={'text-dark'} style={{fontSize:24}}/><sup className={'text-white p-1 px-2 bg-danger rounded'} >4</sup>
-                            </div>
+                            </Link>
                             <div className={'mx-3'}>
                                 <FontAwesomeIcon icon={faMobile} className={'text-dark'} style={{fontSize:24}}/>
                             </div>
                             <div className={'mx-3'}>
-                                <span>Login</span>
+                                <span><Link to={'/login'}>Login</Link></span>
                             </div>
 
                         </Col>

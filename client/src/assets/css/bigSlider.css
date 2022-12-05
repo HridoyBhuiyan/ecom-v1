@@ -25,7 +25,7 @@
 @media (max-width: 374.98px) {
     .slider-img{
         width: 100% !important;
-        height: auto !important;
+        height: 245px !important;
         margin:10px 10px 10px 10px ;
     }
     .slider-title-div{
@@ -41,7 +41,7 @@
 @media (min-width: 375.98px) and (max-width: 575.98px){
     .slider-img{
         width: 100% !important;
-        height: auto !important;
+        height: 250px !important;
         margin:10px 10px 10px 10px ;
     }
     .slider-title-div{
@@ -57,7 +57,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     .slider-img{
         width: 100% !important;
-        height: auto !important;
+        height: 380px !important;
         margin:10px 10px 10px 10px ;
     }
     .slider-title-div{

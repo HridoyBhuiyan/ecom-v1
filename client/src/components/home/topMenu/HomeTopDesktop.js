@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import MegaMenu from "./MegaMenu";
-import SliderHome from "./SliderHome";
+import MegaMenu from "../MegaMenu";
+import SliderHome from "../SliderHome";
 
-function HomeTop(props) {
+function HomeTopDesktop(props) {
     return (
         <Fragment>
             <Container fluid={true} className={'p-0 m-0'}>
@@ -21,4 +21,4 @@ function HomeTop(props) {
     );
 }
 
-export default HomeTop;
+export default HomeTopDesktop;

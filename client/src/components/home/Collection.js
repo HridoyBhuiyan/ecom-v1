@@ -6,7 +6,7 @@ function Collection(props) {
     return (
         <Fragment>
             <Container className={'text-center'}>
-                <h4 className={'section-title'}>CATEGORIES</h4>
+                <h4 className={'section-title'}>SPECIAL COLLECTION</h4>
                 <h6 className={'section-sub-title'}>Some of our exclusive Categories, you may like</h6>
                 <Row>
 

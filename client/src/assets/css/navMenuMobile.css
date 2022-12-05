@@ -4,14 +4,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 10;
     overflow-x: hidden;
     overflow-y: scroll;
+    margin-top: 70px;
     font-size: 16px;
     padding-top: 20px;
-    transition: 0.1s;
     background-color: #ffffff;
-    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1)
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+    transition: ease;
 }
 .sideNavClose {
     height: 100%;
