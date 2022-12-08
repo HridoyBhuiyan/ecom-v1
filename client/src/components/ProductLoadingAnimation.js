@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {ShimmerPostItem} from "react-shimmer-effects";
-import {Col} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 
 const ProductLoadingAnimation = (props) => {
     if (props.colNum==6){
@@ -23,6 +23,15 @@ const ProductLoadingAnimation = (props) => {
                 <Col xl={3} lg={3}  md={3} sm={6} xs={6} ><ShimmerPostItem card title/></Col>
                 <Col xl={3} lg={3}  md={3} sm={6} xs={6} ><ShimmerPostItem card title/></Col>
                 <Col xl={3} lg={3}  md={3} sm={6} xs={6} ><ShimmerPostItem card title/></Col>
+            </Fragment>
+        );
+    }
+    else if (props.colNum==3){
+        return (
+            <Fragment>
+                    <Col  xl={4} lg={4} md={4} sm={4} xs={6}><ShimmerPostItem card title/></Col>
+                    <Col  xl={4} lg={4} md={4} sm={4} xs={6}><ShimmerPostItem card title/></Col>
+                    <Col  xl={4} lg={4} md={4} sm={4} xs={6}><ShimmerPostItem card title/></Col>
             </Fragment>
         );
     }

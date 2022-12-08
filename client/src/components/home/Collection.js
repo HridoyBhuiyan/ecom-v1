@@ -28,7 +28,9 @@ function Collection(props) {
                         <div style={{height:50}} >
                             <p className={'product-name-on-card'}>{item.brand} : {item.title}</p>
                         </div>
-                        <p className={'product-price-on-card mb-1'}>Price: {item.price}TK</p>
+                        <div className={"mb-1"}>
+                            <p className={'product-price-on-card'}>Price: {item.special_price=="Null"?<strike className={'product-price-on-card text-dark'}>{item.price}</strike>:""} {item.price}TK</p>
+                        </div>
                     </Card.Body>
                 </Card>
             </Col>

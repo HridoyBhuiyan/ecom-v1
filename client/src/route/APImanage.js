@@ -8,6 +8,11 @@ class ApImanage {
    static categorydetails = this.baseApiUrl+'categorydetails'
    static specialProduct = this.baseApiUrl+'special'
    static featuredProduct = this.baseApiUrl+'featured'
+   static newproduct = this.baseApiUrl+'newproduct'
+   static getProductListByCategory = this.baseApiUrl+'categoryProduct/'
+   static getProductListBySubCategory=(catName, subCatName)=>{
+      return this.baseApiUrl+'subcategoryProduct/'+catName+"/"+subCatName;
+   }
 }
 
 export default ApImanage;

@@ -4,6 +4,7 @@ import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {Accordion} from "react-bootstrap";
 import axios from "axios";
 import ApImanage from "../../route/APImanage";
+import {Link} from "react-router-dom";
 
 function MegaMenu(props) {
     const [data, setData] = useState([]);
@@ -20,16 +21,19 @@ function MegaMenu(props) {
 
 
     const CategoryItem = data.map((item, index)=>{
+        const categoryName = item['parent_category']
         return (
             <Accordion.Item className={'accordionMenuDivInside'} eventKey={index} key={index}>
                 <Accordion.Header className={'accordion p-0'}>
-                    <img src={item['parent_icon']} className={'accordionMenuIcon'}/>{item['parent_category']}
+
+                        <img src={item['parent_icon']} className={'accordionMenuIcon'}/>{item['parent_category']}
+
                 </Accordion.Header>
                 <Accordion.Body>
                     <ul>
                         {item['child_category'].map((item, index)=>{
                             return (<li key={item.id}>
-                                <a href="" className={'accordionItem'}>{item.cat2_name}</a>
+                                <Link to={"/category/"+categoryName+"/subcategory/"+item.cat2_name} className={'accordionItem'}>{item.cat2_name}</Link>
                             </li>)
                         })}
 

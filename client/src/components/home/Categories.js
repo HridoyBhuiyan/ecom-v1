@@ -5,6 +5,7 @@ import watchImg from "../../assets/image/watch.jpg";
 import axios from "axios";
 import APImanage from "../../route/APImanage";
 import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import {Link} from "react-router-dom";
 
 function Categories(props) {
     const [data, setData] = useState([]);
@@ -27,15 +28,18 @@ function Categories(props) {
     const categoryItem= data.map((item, index)=>{
             return(
                 <Col  xl={2} lg={2} md={2} sm={4} xs={6} key={index} className={'my-2'}>
+                    <Link to={'/category/'+item['parent_category']} className={'text-decoration-none text-dark'}>
                     <Card className={'card'}>
                         <img src={item.parent_icon} className={'px-3 pt-3'}/>
                         <div className={'py-1 pt-2'}>
                             <p className={'category-name'}>{item.parent_category}</p>
                         </div>
                     </Card>
+                    </Link>
                 </Col>
             )
     })
+
 
     const ShowCategoryItem=()=>{
         if (loading){

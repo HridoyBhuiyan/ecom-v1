@@ -6,6 +6,10 @@
     height: 380px;
     margin:80px 20px 80px 20px ;
 }
+.newProductSlider{
+    height: 280px;
+    margin: 10px;
+}
 .slick-slide{
     height:auto !important;
 }

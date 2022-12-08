@@ -30,5 +30,7 @@ Route::get("/sendSiteInfo",[SiteinfoController::class,"sendSiteInfo"]);
 Route::get("/categorydetails",[CategoryController::class,"sendCategoryDetails"]);
 Route::get('/featured',[ProductListController::class,"getFeaturedProduct"]);
 Route::get('/special',[ProductListController::class,"getSpecialProduct"]);
-Route::get('/subcategoryProduct/{subCategory}',[ProductListController::class,"getSubCategoryProduct"]);
+Route::get('/subcategoryProduct/{category}/{subCategory}',[ProductListController::class,"getSubCategoryProduct"]);
 Route::get('/categoryProduct/{category}',[ProductListController::class,"getCategoryProduct"]);
+
+Route::get('/newproduct',[ProductListController::class,"getNewProduct"]);

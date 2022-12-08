@@ -2,53 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ff25da3-8aef-4dbd-b0f5-5f3ebda18831" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../admin/app/Http/Controllers/VisitorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../admin/app/Models/VisitorModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../admin/resources/js/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/footerSection/FooterLoadingAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/others/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/others/OtherLoadingAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/othersPage/AboutPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/APImanage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/resources/js/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/js/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/resources/views/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/productListByCategory/ListByCategory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/productListBySubCategory/ListBySubCategory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/ProductListByCategoryPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/ProductListBySubCategoryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/app/Http/Controllers/ProductListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/app/Http/Controllers/ProductListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/vite.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/CartList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/CartList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FooterDektop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/footerSection/FooterDektop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FooterMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/footerSection/FooterMobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/footerSection/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/footerSection/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/navMenu/NavMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navMenu/NavMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/navMenu/NavMenuMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navMenu/NavMenuMobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/bigSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bigSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Collection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/FeaturedProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/FeaturedProducts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/MegaMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/others/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/others/Purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Purchase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/others/Refund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Refund.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/CartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/FavouritePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/FavouritePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/NotificationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/NotificationPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/OrderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/ProductDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/ProductDetailsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/UserOnboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/UserOnboardPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/othersPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/othersPage/ContactPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/othersPage/PolicyPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/othersPage/PolicyPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/othersPage/PurchasePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/othersPage/PurchasePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/othersPage/RefundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/othersPage/RefundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/NewArrival.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/NewArrival.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/SliderHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/SliderHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/APImanage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/APImanage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,20 +44,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Hridoy/Desktop/SAAS/client/src/assets/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hridoy/Desktop/SAAS/client/src/assets/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\assets\css" />
@@ -116,6 +85,7 @@
       <workItem from="1669555287249" duration="13060000" />
       <workItem from="1669637589083" duration="50402000" />
       <workItem from="1669981300203" duration="62341000" />
+      <workItem from="1670480201962" duration="14239000" />
     </task>
     <servers />
   </component>
