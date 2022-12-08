@@ -4,15 +4,26 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faBell, faHeart, faMobile, faSearch, faShoppingCart, faUser} from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../assets/image/logo.png";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import ApImanage from "../../../route/APImanage";
 
 function NavMenuMobile(props) {
     const [sidenav, setSidenav]= useState('sideNavClose');
     const [navOverlay, setNavOverlay]= useState("ContentOverlayClose");
-
+    const [data, setData] = useState([]);
+    const getData = async ()=>{
+        await axios.get(ApImanage.categorydetails)
+            .then(response=>{
+                setData(response.data)
+            })
+    }
 
     useEffect(()=>{
-        console.log(sidenav)
+        getData();
     },[])
+
+
+
 
     const sideNavOpenClose=()=>{
         if (sidenav==='sideNavClose'){
@@ -27,141 +38,29 @@ function NavMenuMobile(props) {
     }
 
 
+    const CategoryItem = data.map((item, index)=>{
+        return (
+            <Accordion.Item className={'accordionMenuDivInside'} eventKey={index} key={index}>
+                <Accordion.Header className={'accordion p-0'}>
+                    <img src={item['parent_icon']} className={'accordionMenuIcon'}/>{item['parent_category']}
+                </Accordion.Header>
+                <Accordion.Body>
+                    <ul>
+                        {item['child_category'].map((item, index)=>{
+                            return (<li key={item.id}>
+                                <a href="" className={'accordionItem'}>{item.cat2_name}</a>
+                            </li>)
+                        })}
+
+                    </ul>
+                </Accordion.Body>
+            </Accordion.Item>
+        );
+    })
+
 
     const NavElement = ()=>{
-        return(<Accordion className={' p-0'}>
-
-
-
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="0">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/> 1 Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="1">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/> 1 Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="2">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/> 1 Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="3">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/> 1 Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="4">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/>Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="5">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/>Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="6">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/>Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="7">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/>Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item className={'accordionMenuDivInside'} eventKey="8">
-                <Accordion.Header className={'accordion p-0'}>
-                    <FontAwesomeIcon icon={faUser} className={'accordionMenuIcon'}/>Men's Item
-                </Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                        <li><a href="src/components/common/navMenu/NavMenuMobile" className={'accordionItem'}>Men Shirt</a></li>
-                    </ul>
-                </Accordion.Body>
-            </Accordion.Item>
-
-
-
-
-        </Accordion>
-        )
+        return(<Accordion className={' p-0'}>{CategoryItem}</Accordion>)
     }
 
 
@@ -179,7 +78,7 @@ function NavMenuMobile(props) {
 
 
                 <Col lg={4} md={4} sm={4} xs={4} className={'d-flex align-items-center justify-content-center'}>
-                    <Navbar.Brand href="#home" >
+                    <Navbar.Brand href="" >
                         <Link to={'/'}><img src={Logo} height={45}/></Link>
                     </Navbar.Brand>
                 </Col>

@@ -1,19 +1,19 @@
 import React, {Fragment, useEffect} from 'react';
 import NavMenu from "../../components/common/navMenu/NavMenu";
 import Footer from "../../components/common/footerSection/Footer";
-import Purchase from "../../components/others/Purchase";
+import About from "../../components/others/About";
 
-const PurchasePage = () => {
+const AboutPage = () => {
     useEffect(()=>{
-        window.scroll(0,0)
+        window.scroll(0, 0)
     },[])
     return (
         <Fragment>
             <NavMenu/>
-            <Purchase/>
+            <About/>
             <Footer/>
         </Fragment>
     );
 };
 
-export default PurchasePage;
+export default AboutPage;

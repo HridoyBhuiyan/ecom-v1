@@ -1,10 +1,10 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Card, Container} from "react-bootstrap";
 import axios from "axios";
 import APImanage from "../../route/APImanage";
 import OtherLoadingAnimation from "./OtherLoadingAnimation";
 
-const Policy = () => {
+const About = () => {
     const [loading, setLoading] = useState(true)
     const [data, setData]= useState("");
 
@@ -13,28 +13,29 @@ const Policy = () => {
         await axios.get(APImanage.siteInfo)
             .then((response)=>{
                 if (response.status==200){
-                    value = response.data[0]['policy']
+                    value = response.data[0]['about']
                     setData(value)
                     setLoading(false)
-                    sessionStorage.setItem("policyInfo", value)
+                    sessionStorage.setItem("aboutInfo", value)
 
                 }
             })
-            .catch(error=>console.log(error))
+            .catch(error=>{})
         return value;
     }
 
 
     useEffect(()=>{
-        if (!sessionStorage.getItem("policyInfo")){
-            getData().then(x=>{})
+        if (!sessionStorage.getItem("aboutInfo")){
+            getData().then(x=>console.log(x))
         }
         else {
-            setData(sessionStorage.getItem("policyInfo"))
+            setData(sessionStorage.getItem("aboutInfo"))
             setLoading(false)
         }
 
     },[])
+
 
     if (loading==true){
         return <OtherLoadingAnimation/>
@@ -45,7 +46,7 @@ const Policy = () => {
             <Fragment>
                 <Container className={'my-5 py-5'}>
                     <Card>
-                        <h4 className={'text-center py-3'}>Privacy Policy</h4>
+                        <h4 className={'text-center py-3'}>About</h4>
                         <div className={'my-3 p-4'} dangerouslySetInnerHTML={{__html:data}}>
 
                         </div>
@@ -56,4 +57,4 @@ const Policy = () => {
     }
 };
 
-export default Policy;
+export default About;

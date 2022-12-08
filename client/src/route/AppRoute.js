@@ -11,6 +11,7 @@ import NotificationPage from "../page/NotificationPage";
 import FavouritePage from "../page/FavouritePage";
 import CartPage from "../page/CartPage";
 import OrderPage from "../page/OrderPage";
+import AboutPage from "../page/othersPage/AboutPage";
 
 function AppRoute(props) {
     return (
@@ -28,6 +29,7 @@ function AppRoute(props) {
                     <Route path={'/favourite'} element={<FavouritePage/>}/>
                     <Route path={'/cart'} element={<CartPage/>}/>
                     <Route path={'/order'} element={<OrderPage/>}/>
+                    <Route path={'/about'} element={<AboutPage/>}/>
                 </Routes>
             </BrowserRouter>
         </Fragment>

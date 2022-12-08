@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import FeaturedProducts from "../components/home/FeaturedProducts";
 import Categories from "../components/home/Categories";
 import Collection from "../components/home/Collection";
@@ -9,6 +9,9 @@ import Footer from "../components/common/footerSection/Footer";
 import Specility from "../components/home/Specility";
 
 function HomePage(props) {
+    useEffect(()=>{
+        window.scroll(0,0)
+    },[])
     return (
         <Fragment>
             <NavMenu/>

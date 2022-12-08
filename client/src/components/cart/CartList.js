@@ -11,8 +11,6 @@ const CartList = () => {
             <Container className={'TopSection'}>
                 <Row>
 
-
-
                     <Col className={'p-1'} md={12} lg={12} sm={12} xs={12}>
                         <Card>
                             <Card.Body>

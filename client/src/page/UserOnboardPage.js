@@ -1,9 +1,12 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import NavMenu from "../components/common/navMenu/NavMenu";
 import Footer from "../components/common/footerSection/Footer";
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import loginBanner from '../assets/image/loginCover.png';
 function UserOnboardPage(props) {
+    useEffect(()=>{
+        window.scroll(0,0)
+    },[])
     return (
         <Fragment>
             <NavMenu/>

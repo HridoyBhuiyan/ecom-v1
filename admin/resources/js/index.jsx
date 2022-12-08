@@ -2,12 +2,13 @@ import './bootstrap';
 import '../css/app.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from "@/App";
 
-if (document.getElementById('app')) {
-    const Index = ReactDOM.createRoot(document.getElementById("app"));
+if (document.getElementById('root')) {
+    const Index = ReactDOM.createRoot(document.getElementById("root"));
     Index.render(
         <React.StrictMode>
-            hello
+            <App/>
         </React.StrictMode>
     )
 }
