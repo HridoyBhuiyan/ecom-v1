@@ -1,17 +1,17 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import ProductListByCategoryPage from "../../page/ProductListByCategoryPage";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Breadcrumb, Card, Col, Container, Row} from "react-bootstrap";
 import axios from "axios";
 import ApImanage from "../../route/APImanage";
 import {Link} from "react-router-dom";
-import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import ProductLoadingAnimation from "../placeholer/ProductLoadingAnimation";
 
 const ListBySubCategory = (props) => {
     const catName=props.params.catName;
     const subCatName=props.params.subCatName;
-    console.log(ApImanage.getProductListBySubCategory(catName, subCatName))
     const [loading, setLoading]=useState(true);
     const [data, setData]= useState([]);
+
     const getData=async ()=>{
         await axios.get(ApImanage.getProductListBySubCategory(catName, subCatName))
             .then(res=>{
@@ -22,6 +22,7 @@ const ListBySubCategory = (props) => {
             })
             .catch(err=>console.log(err))
     }
+
     useEffect(()=>{
         getData()
     },[])
@@ -60,6 +61,19 @@ const ListBySubCategory = (props) => {
     return (
         <Fragment>
             <Container className={'text-center BetweenTwoSection'}>
+
+                <Breadcrumb className={'py-4 rounded'}>
+                    <Breadcrumb.Item>
+                        <Link to={'/'}>Home</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to={'/category/'+props.params.catName}>{props.params.catName}</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to={'/category/'+props.params.catName+"/subcategory/"+props.params.subCatName}>{props.params.subCatName}</Link>
+                    </Breadcrumb.Item>
+                </Breadcrumb>
+
                 <div className={'my-4 mt-5'}>
                     <h4 className={'section-title'}>{props.params.catName}</h4>
                     <h6 className={'section-sub-title'}>Some of our exclusive collection, you may like</h6>

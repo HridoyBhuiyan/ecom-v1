@@ -7,7 +7,8 @@ import {faChevronRight} from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import APImanage from "../../route/APImanage";
-import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import ProductLoadingAnimation from "../placeholer/ProductLoadingAnimation";
+import {Link} from "react-router-dom";
 function NewArrival(props) {
 
     const sliderRef = new useRef();
@@ -79,12 +80,14 @@ function NewArrival(props) {
     const productList = data.map((item, index)=>{
         return(
             <div key={index} >
+                <Link to={"productDetails/"+item.product_code}>
                 <Card className={'p-1 card'}>
                     <img   src={item.image} className={'newProductSlider'}/>
                     <Card.Body>
                         <p className={'category-name'}>{item.title}</p>
                     </Card.Body>
                 </Card>
+                </Link>
             </div>
         )
     })

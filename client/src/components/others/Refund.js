@@ -1,8 +1,9 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Card, Container} from "react-bootstrap";
+import {Breadcrumb, Card, Container} from "react-bootstrap";
 import APImanage from "../../route/APImanage";
 import axios from "axios";
-import OtherLoadingAnimation from "./OtherLoadingAnimation";
+import OtherLoadingAnimation from "../placeholer/OtherLoadingAnimation";
+import {Link} from "react-router-dom";
 
 const Refund = () => {
     const [loading, setLoading] = useState(true)
@@ -16,9 +17,7 @@ const Refund = () => {
                     setData(value)
                     setLoading(false)
                     sessionStorage.setItem("refundInfo", value)
-
                 }
-
             })
             .catch(error=>console.log(error))
         return value;
@@ -45,6 +44,14 @@ const Refund = () => {
         return (
             <Fragment>
                 <Container className={'my-5 py-5'}>
+                    <Breadcrumb className={'py-4 rounded'}>
+                        <Breadcrumb.Item>
+                            <Link to={'/'}>Home</Link>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                            <Link to={'/refund'}>Refund</Link>
+                        </Breadcrumb.Item>
+                    </Breadcrumb>
                     <Card>
                         <h4 className={'text-center py-3'}>Refund Policy</h4>
                         <div className={'my-3 p-4'} dangerouslySetInnerHTML={{__html:data}}>

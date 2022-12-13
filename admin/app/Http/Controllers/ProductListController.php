@@ -18,11 +18,17 @@ class ProductListController extends Controller
     public function getSubCategoryProduct($category, $subCategory){
         return ProductListModel::where("category", $category)->where("subcategory", $subCategory)->get();
     }
+
     public function getCategoryProduct($category){
         return ProductListModel::where("category", $category)->get();
     }
+
     public function getNewProduct(){
         return ProductListModel::orderBy('id','desc')->take(5)->get();
+    }
+
+    public function getProductListBySearch($query){
+        return ProductListModel::where("title", "Like","%{$query}%")->get();
     }
 }
 

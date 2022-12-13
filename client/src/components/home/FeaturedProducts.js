@@ -3,7 +3,7 @@ import {Card, Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApImanage from "../../route/APImanage";
-import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import ProductLoadingAnimation from "../placeholer/ProductLoadingAnimation";
 function FeaturedProducts(props) {
 
     const [loading, setLoading]=useState(true);
@@ -26,7 +26,7 @@ function FeaturedProducts(props) {
     const allData = data.map((item, index)=>{
         return(
             <Col  xl={2} lg={2} md={2} sm={4} xs={6} key={index} className={'py-2'}>
-                <Link to={'/productdetails'}>
+                <Link to={'/productdetails/'+item.product_code}>
                     <Card className={'image-box card'}>
                         <img  className={'w-100'} src={item.image}/>
                         <div style={{height:100}}>

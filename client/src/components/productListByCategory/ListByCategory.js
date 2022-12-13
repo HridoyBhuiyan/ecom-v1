@@ -1,9 +1,9 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Breadcrumb, Card, Col, Container, Row} from "react-bootstrap";
 import axios from "axios";
 import ApImanage from "../../route/APImanage";
 import {Link} from "react-router-dom";
-import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import ProductLoadingAnimation from "../placeholer/ProductLoadingAnimation";
 
 const ListByCategory = (props) => {
 
@@ -61,10 +61,17 @@ const ListByCategory = (props) => {
         <Fragment>
 
             <Container className={'text-center BetweenTwoSection'}>
-                <div className={'my-4 mt-5'}>
-                    <h4 className={'section-title'}>{props.catName}</h4>
-                    <h6 className={'section-sub-title'}>Some of our exclusive collection, you may like</h6>
-                </div>
+
+
+                <Breadcrumb className={'py-4 rounded'}>
+                    <Breadcrumb.Item>
+                        <Link to={'/'}>Home</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to={'/category/'+props.catName}>{props.catName}</Link>
+                    </Breadcrumb.Item>
+                </Breadcrumb>
+
 
                 <Row>
                     <AllDataShow/>

@@ -20,14 +20,16 @@ function AppRoute(props) {
         <Fragment>
             <BrowserRouter>
                 <Routes>
-                    <Route path={'/'} element={<HomePage/>}/>
+                    {/*<Route path={'/'} element={<HomePage/>}/>*/}
+                    <Route path={'/'} element={<HomePage key={Date.now()}/>}/>
+
                     <Route path={'/login'} element={<UserOnboardPage/>}/>
                     <Route path={'/contact'} element={<ContactPage/>}/>
                     <Route path={'/policy'} element={<PolicyPage/>}/>
                     <Route path={'/about'} element={<AboutPage/>}/>
                     <Route path={'/purchase'} element={<PurchasePage/>}/>
                     <Route path={'/refund'} element={<RefundPage/>}/>
-                    <Route path={'/productdetails'} element={<ProductDetailsPage/>}/>
+                    <Route path={'/productdetails/:productCode'} element={<ProductDetailsPage/>}/>
                     <Route path={'/notification'} element={<NotificationPage/>}/>
                     <Route path={'/favourite'} element={<FavouritePage/>}/>
                     <Route path={'/cart'} element={<CartPage/>}/>

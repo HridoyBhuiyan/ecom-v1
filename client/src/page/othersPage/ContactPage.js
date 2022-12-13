@@ -1,11 +1,12 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import NavMenu from "../../components/common/navMenu/NavMenu";
 import Footer from "../../components/common/footerSection/Footer";
-import {Button, Card, Col, Container, Form, Row, Spinner} from "react-bootstrap";
+import {Breadcrumb, Button, Card, Col, Container, Form, Row, Spinner} from "react-bootstrap";
 import loginBanner from "../../assets/image/loginCover.png";
 import axios from "axios";
 import ApImanage from "../../route/APImanage";
 import validation from "../../route/validation";
+import {Link} from "react-router-dom";
 
 function ContactPage(props) {
 
@@ -14,30 +15,26 @@ function ContactPage(props) {
         window.scroll(0,0)
     },[])
 
-
-
     const sendMsg=async ()=> {
         let name = document.getElementById("nameId").value;
         let email = document.getElementById("emailId").value;
         let text = document.getElementById("textId").value;
         let form = document.getElementById("contactForm");
-        if (!validation.nameRegx.test(name)){
-            alert("invalid name");
-        }
+
+        if (!validation.nameRegx.test(name)){ alert("invalid name");}
+
         else if(!validation.emailRegx.test(email)){
-            alert("invalid email");
-        }
+            alert("invalid email");}
+
         else if(text.length==0){
-            alert ("Message empty")
-        }
+            alert ("Message empty")}
+
         else {
-
-
             let sendJson = {
                 name:name,
                 email:email,
-                text:text
-            }
+                text:text}
+
             console.log(sendJson)
 
             setSending(true)
@@ -50,12 +47,7 @@ function ContactPage(props) {
                     }
                     console.log(res.data)
                 })
-                .catch(error=>console.log(error))
-
-        }
-
-
-
+                .catch(error=>console.log(error))}
 
     }
 
@@ -65,10 +57,18 @@ function ContactPage(props) {
     return (
         <Fragment>
             <NavMenu/>
-            <Container className={'my-5 py-5'}>
-                <Row className={'d-flex justify-content-center align-items-center'}>
-                    <Col md={10} lg={10} sm={10} xs={10}>
-                        <Row className={'d-flex align-items-center justify-content-center flex-row card'}>
+            <Container className={''}>
+
+                <Breadcrumb className={'py-4 rounded'}>
+                    <Breadcrumb.Item>
+                        <Link to={'/'}>Home</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to={'/contact'}>Contact</Link>
+                    </Breadcrumb.Item>
+                </Breadcrumb>
+
+                        <Row className={'d-flex align-items-center justify-content-center flex-row card p-0 m-0'}>
                             <Col lg={6} xl={6} md={6} sm={12} xs={12}>
                                 <h4 className={'text-center'}>Contact US</h4>
                                 <Form id={"contactForm"}>
@@ -94,17 +94,16 @@ function ContactPage(props) {
                                 </Button>
                             </Col>
 
-                            <Col lg={6} xl={6} md={6} sm={0} xs={0} className={'p-0 Desktop'}>
+                            <Col lg={6} xl={6} md={6}className={'p-0 Desktop'}>
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3651.604769279451!2d90.36629660107944!3d23.761469444193434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1669880070693!5m2!1sen!2sbd"
-                                    width="600" height="450" loading="lazy"
+                                    height="450" loading="lazy" style={{width:"100%"}}
                                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </Col>
 
 
                         </Row>
-                    </Col>
-                </Row>
+
             </Container>
             <Footer/>
         </Fragment>

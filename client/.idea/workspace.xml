@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ff25da3-8aef-4dbd-b0f5-5f3ebda18831" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/image/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/productListByCategory/ListByCategory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/productListBySubCategory/ListBySubCategory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/ProductListByCategoryPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/ProductListBySubCategoryPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../admin/app/Http/Controllers/ProductListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/app/Http/Controllers/ProductListController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../admin/app/Http/Controllers/SliderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../admin/app/Models/SliderModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/placeholer/ProductDetailsAnimation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../admin/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../admin/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bigSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bigSlider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/placeholder-loading.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductLoadingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/placeholer/ProductLoadingAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/navMenu/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navMenu/NavMenuDesktop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Collection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/MegaMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/MegaMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/FeaturedProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/FeaturedProducts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/NewArrival.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/NewArrival.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/SliderHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/SliderHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/notification/Notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/notification/Notification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/OtherLoadingAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/placeholer/OtherLoadingAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Policy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Purchase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Refund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Refund.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productDetails/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/productDetails/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productListByCategory/ListByCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/productListByCategory/ListByCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/productListBySubCategory/ListBySubCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/productListBySubCategory/ListBySubCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/othersPage/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/othersPage/ContactPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/route/APImanage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/APImanage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
     </list>
@@ -63,11 +72,11 @@
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\assets\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\components\placeholer" />
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\components\common\footerSection" />
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\page\othersPage" />
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src" />
       <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\components\home\topMenu" />
-      <recent name="C:\Users\Hridoy\Desktop\SAAS\client\src\components\common\navMenu" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +94,8 @@
       <workItem from="1669555287249" duration="13060000" />
       <workItem from="1669637589083" duration="50402000" />
       <workItem from="1669981300203" duration="62341000" />
-      <workItem from="1670480201962" duration="14239000" />
+      <workItem from="1670480201962" duration="35981000" />
+      <workItem from="1670768489022" duration="19952000" />
     </task>
     <servers />
   </component>

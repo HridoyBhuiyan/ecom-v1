@@ -1,8 +1,9 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Breadcrumb, Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import axios from "axios";
 import APImanage from "../../route/APImanage";
-import OtherLoadingAnimation from "./OtherLoadingAnimation";
+import OtherLoadingAnimation from "../placeholer/OtherLoadingAnimation";
+import {Link} from "react-router-dom";
 
 const Policy = () => {
     const [loading, setLoading] = useState(true)
@@ -43,7 +44,15 @@ const Policy = () => {
     else{
         return (
             <Fragment>
-                <Container className={'my-5 py-5'}>
+                <Container>
+                    <Breadcrumb className={'py-4 rounded'}>
+                        <Breadcrumb.Item>
+                            <Link to={'/'}>Home</Link>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                            <Link to={'/policy'}>Policy</Link>
+                        </Breadcrumb.Item>
+                    </Breadcrumb>
                     <Card>
                         <h4 className={'text-center py-3'}>Privacy Policy</h4>
                         <div className={'my-3 p-4'} dangerouslySetInnerHTML={{__html:data}}>

@@ -4,7 +4,7 @@ import productImg from "../../assets/image/product.webp";
 import watchImg from "../../assets/image/watch.jpg";
 import axios from "axios";
 import APImanage from "../../route/APImanage";
-import ProductLoadingAnimation from "../ProductLoadingAnimation";
+import ProductLoadingAnimation from "../placeholer/ProductLoadingAnimation";
 import {Link} from "react-router-dom";
 
 function Categories(props) {
